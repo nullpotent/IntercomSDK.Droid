@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide']" />
+	<remove-node path="/api/package[@name='io.intercom.okhttp3.internal']" />
+	<remove-node path="/api/package[@name='io.intercom.okhttp3.internal.http']" />
+	<remove-node path="/api/package[@name='io.intercom.android.sdk.nexus']" />
+	<remove-node path="/api/package[@name='io.intercom.android.sdk.store']" />
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide.load.data']" />
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide.load.engine']" />
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide.load.model']" />
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide.load.engine.bitmap_recycle']" />
+	<remove-node path="/api/package[@name='io.intercom.android.sdk.profile']" />
+	<remove-node path="/api/package[@name='io.intercom.android.sdk.models']" />
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide.request.target']" />
+	<remove-node path="/api/package[@name='io.intercom.com.google.gson.internal']" />
+	<remove-node path="/api/package[@name='io.intercom.com.google.gson.internal.bind']" />
+	<remove-node path="/api/package[@name='io.intercom.com.squareup.otto']" />
+	<remove-node path="/api/package[@name='io.intercom.okio']" />
+	<remove-node path="/api/package[@name='io.intercom.com.bumptech.glide.request.animation']" />
+	<remove-node path="/api/package[@name='io.intercom.com.google.gson']" />
+</metadata>

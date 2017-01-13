@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props" Condition="Exists('..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F924E6D3-2C1C-4F34-88A1-879B5D86E65E}</ProjectGuid>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>IntercomBinding_Droid</RootNamespace>
+    <AssemblyName>IntercomBinding_Droid</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidTlsProvider></AndroidTlsProvider>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>IntercomSDK.Droid</PackageId>
+    <PackageVersion>3.0.22</PackageVersion>
+    <Authors>nullpotent</Authors>
+    <Owners>nullpotent</Owners>
+    <PackageReleaseNotes>v3.0.22</PackageReleaseNotes>
+    <Summary>Intercom SDK for Android</Summary>
+    <PackageTags>intercom android xamarin</PackageTags>
+    <Title>IntercomSDK.Droid</Title>
+    <Description>Intercom SDK bindings for Android</Description>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <PackageIconUrl>https://raw.githubusercontent.com/iccthedral/IntercomSDK.Droid/master/Intercom_blue_symbol.png</PackageIconUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/iccthedral/IntercomSDK.Droid/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/iccthedral/IntercomSDK.Droid</PackageProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Additions\AboutAdditions.txt" />
+    <None Include="Jars\AboutJars.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <TransformFile Include="Transforms\EnumFields.xml" />
+    <TransformFile Include="Transforms\EnumMethods.xml" />
+    <TransformFile Include="Transforms\Metadata.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <LibraryProjectZip Include="Jars\intercom-sdk-base-3.0.17.aar" />
+    <LibraryProjectZip Include="Jars\intercom-sdk-gcm-3.0.17.aar" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
+  <Import Project="..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets" Condition="Exists('..\..\..\..\..\Projects\rs.cicadas.intercom\packages\NuGet.Build.Packaging.0.1.157-dev\build\NuGet.Build.Packaging.targets')" />
+</Project>
